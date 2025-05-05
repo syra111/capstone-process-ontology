@@ -1,0 +1,1216 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Capstone Project Ontology</title>
+    <title>Capstone Project Ontology</title>
+    <link href="/lode/owl.css" rel="stylesheet" type="text/css">
+    <link href="/lode/Primer.css" rel="stylesheet" type="text/css">
+    <link href="/lode/rec.css" rel="stylesheet" type="text/css">
+    <link href="/lode/extra.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/lode/favicon.ico">
+    <script src="/lode/jquery.js"></script>
+    <script src="/lode/jquery.scrollTo.js"></script>
+    <script src="/lode/marked.min.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                jQuery(".markdown").each(function (el) {
+                    jQuery(this).after(marked(jQuery(this).text())).remove()
+                });
+                var list = $('a[name="https://raw.githubusercontent.com/syra111/capstone-process-ontology/refs/heads/main/capstone-process-ont.rdf"]');
+    if (list.size() != 0) {
+                    var element = list.first();
+                    $.scrollTo(element);
+                }
+            });
+    </script>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Capstone Project Ontology</h1>
+        <dl>
+            <dt>IRI:</dt>
+            <dd>http://www.semanticweb.org/capstone-ontology</dd>
+        </dl>
+        <dl>
+            <dt>Imported Ontologies
+                :
+            </dt>
+            <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a> (<a
+                    href="/lode/extract?url=http://purl.org/dc/terms/">visualise it with
+                    LODE
+                </a>)</dd>
+            <dd><a href="http://www.w3.org/2006/time#2016">http://www.w3.org/2006/time#2016</a> (<a
+                    href="/lode/extract?url=http://www.w3.org/2006/time#2016">visualise it with
+                    LODE
+                </a>)</dd>
+            <dd><a
+                    href="http://www.w3.org/ns/prov-o-inverses-20130430">http://www.w3.org/ns/prov-o-inverses-20130430</a>
+                (<a href="/lode/extract?url=http://www.w3.org/ns/prov-o-inverses-20130430">visualise it with
+                    LODE
+                </a>)</dd>
+            <dd><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a> (<a
+                    href="/lode/extract?url=http://xmlns.com/foaf/0.1/">visualise it with
+                    LODE
+                </a>)</dd>
+        </dl>
+        <dl>
+            <dt>Other visualisation
+                :
+            </dt>
+            <dd><a
+                    href="/lode/source?url=https://raw.githubusercontent.com/syra111/capstone-process-ontology/refs/heads/main/casptone-process-ont.rdf">Ontology
+                    source</a>
+                -
+                <a
+                    href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/syra111/capstone-process-ontology/refs/heads/main/casptone-process-ont.rdf">WebVowl</a>
+            </dd>
+        </dl>
+    </div>
+    <hr>
+    <div id="toc">
+        <h2>Table of Content</h2>
+        <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#objectproperties">Object Properties</a></li>
+            <li><a href="#dataproperties">Data Properties</a></li>
+            <li><a href="#namedindividuals">Named Individuals</a></li>
+            <li><a href="#namespacedeclarations">Namespace Declarations</a></li>
+        </ol>
+    </div>
+    <h2 id="introduction">Introduction</h2><span class="markdown">A comprehensive ontology for university capstone
+        projects covering stakeholders, phases, deliverables, and evaluations.</span>
+    <div id="classes">
+        <h2>Classes</h2>
+        <ul class="hlist">
+            <li><a href="#d4e359" title="http://www.semanticweb.org/capstone-ontology#Advisor"><span>advisor</span></a>
+            </li>
+            <li><a href="#d4e369" title="http://www.semanticweb.org/capstone-ontology#CapstoneProject"><span>capstone
+                        project</span></a></li>
+            <li><a href="#d4e430"
+                    title="http://www.semanticweb.org/capstone-ontology#Deliverables"><span>deliverables</span></a></li>
+            <li><a href="#d4e440" title="http://www.semanticweb.org/capstone-ontology#Design"><span>design</span></a>
+            </li>
+            <li><a href="#d4e467"
+                    title="http://www.semanticweb.org/capstone-ontology#Developer"><span>developer</span></a></li>
+            <li><a href="#d4e475"
+                    title="http://www.semanticweb.org/capstone-ontology#Development"><span>development</span></a></li>
+            <li><a href="#d4e495"
+                    title="http://www.semanticweb.org/capstone-ontology#Evaluation"><span>evaluation</span></a></li>
+            <li><a href="#d4e505" title="http://www.semanticweb.org/capstone-ontology#ExternalEvaluator"><span>external
+                        evaluator</span></a></li>
+            <li><a href="#d4e516" title="http://www.semanticweb.org/capstone-ontology#Faculty"><span>faculty</span></a>
+            </li>
+            <li><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases"><span>phases</span></a>
+            </li>
+            <li><a href="#d4e538"
+                    title="http://www.semanticweb.org/capstone-ontology#Presentation"><span>presentation</span></a></li>
+            <li><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project"><span>project</span></a>
+            </li>
+            <li><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole"><span>project
+                        role</span></a></li>
+            <li><a href="#d4e570"
+                    title="http://www.semanticweb.org/capstone-ontology#Proposal"><span>proposal</span></a></li>
+            <li><a href="#d4e591" title="http://www.semanticweb.org/capstone-ontology#Report"><span>report</span></a>
+            </li>
+            <li><a href="#d4e601"
+                    title="http://www.semanticweb.org/capstone-ontology#Researcher"><span>researcher</span></a></li>
+            <li><a href="#d4e608"
+                    title="http://www.semanticweb.org/capstone-ontology#Stakeholders"><span>stakeholders</span></a></li>
+            <li><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student"><span>student</span></a>
+            </li>
+            <li><a href="#d4e662"
+                    title="http://www.semanticweb.org/capstone-ontology#Supervisor"><span>supervisor</span></a></li>
+            <li><a href="#d4e672" title="http://www.semanticweb.org/capstone-ontology#TeamLeader"><span>team
+                        leader</span></a></li>
+        </ul>
+        <div id="d4e359" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Advisor"></a>
+            <h3>advisor<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Advisor</p>
+            <div class="comment"><span class="markdown">Provides administrative guidance and ensures academic
+                    standards.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole">project
+                        role</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e745" title="http://www.semanticweb.org/capstone-ontology#advisor_role_1">advisor role
+                        1</a><sup title="named individual" class="type-ni">ni</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e369" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#CapstoneProject"></a>
+            <h3>capstone project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#CapstoneProject</p>
+            <div class="comment"><span class="markdown">A culminating academic project demonstrating comprehensive
+                    learning in a discipline.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e82" title="http://www.semanticweb.org/capstone-ontology#hasDeliverable">has
+                        deliverable</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e591"
+                        title="http://www.semanticweb.org/capstone-ontology#Report">report</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dd><a href="#d4e94" title="http://www.semanticweb.org/capstone-ontology#hasPhase">has phase</a><sup
+                        title="object property" class="type-op">op</sup> <span class="logic">min</span> 4 <a
+                        href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e129" title="http://www.semanticweb.org/capstone-ontology#hasTeamMember">has team
+                        member</a><sup title="object property" class="type-op">op</sup> <span class="logic">min</span> 2
+                    <a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e129" title="http://www.semanticweb.org/capstone-ontology#hasTeamMember">has team
+                        member</a><sup title="object property" class="type-op">op</sup> <span class="logic">max</span> 3
+                    <a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e430" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Deliverables"></a>
+            <h3>deliverables<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Deliverables</p>
+            <div class="comment"><span class="markdown">Tangible artifact produced during the project.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://www.w3.org/ns/prov#Entity">entity</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e538"
+                        title="http://www.semanticweb.org/capstone-ontology#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e591"
+                        title="http://www.semanticweb.org/capstone-ontology#Report">report</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e190" title="http://www.semanticweb.org/capstone-ontology#hasApprovalStatus">has
+                        approval status</a><sup title="data property" class="type-dp">dp</sup>, <a href="#d4e331"
+                        title="http://www.semanticweb.org/capstone-ontology#hasSubmissionDate">has submission
+                        date</a><sup title="data property" class="type-dp">dp</sup>, <a href="#d4e170"
+                        title="http://www.semanticweb.org/capstone-ontology#producedBy">produced by</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e47" title="http://www.semanticweb.org/capstone-ontology#evaluatesDeliverable">evaluates
+                        deliverable</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e82"
+                        title="http://www.semanticweb.org/capstone-ontology#hasDeliverable">has deliverable</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e440" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Design"></a>
+            <h3>design<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or
+                    <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Design</p>
+            <div class="comment"><span class="markdown">Period focused on system architecture and planning.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e153" title="http://www.semanticweb.org/capstone-ontology#precedes">precedes</a><sup
+                        title="object property" class="type-op">op</sup> <span class="logic">some</span> <a
+                        href="#d4e475"
+                        title="http://www.semanticweb.org/capstone-ontology#Development">development</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e475"
+                        title="http://www.semanticweb.org/capstone-ontology#Development">development</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e495"
+                        title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e570"
+                        title="http://www.semanticweb.org/capstone-ontology#Proposal">proposal</a><sup title="class"
+                        class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e467" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Developer"></a>
+            <h3>developer<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Developer</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole">project
+                        role</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e475" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Development"></a>
+            <h3>development<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Development</p>
+            <div class="comment"><span class="markdown">Implementation stage where solutions are built</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e153" title="http://www.semanticweb.org/capstone-ontology#precedes">precedes</a><sup
+                        title="object property" class="type-op">op</sup> <span class="logic">some</span> <a
+                        href="#d4e495"
+                        title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e440" title="http://www.semanticweb.org/capstone-ontology#Design">design</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e495" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Evaluation"></a>
+            <h3>evaluation<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Evaluation</p>
+            <div class="comment"><span class="markdown">Final assessment of project outcomes and performance.</span>
+            </div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e47" title="http://www.semanticweb.org/capstone-ontology#evaluatesDeliverable">evaluates
+                        deliverable</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e253"
+                        title="http://www.semanticweb.org/capstone-ontology#hasFeedback">has feedback</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e263"
+                        title="http://www.semanticweb.org/capstone-ontology#hasGrade">has grade</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e291"
+                        title="http://www.semanticweb.org/capstone-ontology#hasScore">has score</a><sup
+                        title="data property" class="type-dp">dp</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e25" title="http://www.semanticweb.org/capstone-ontology#conductsEvaluation">conducts
+                        evaluation</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e440" title="http://www.semanticweb.org/capstone-ontology#Design">design</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e505" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#ExternalEvaluator"></a>
+            <h3>external evaluator<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#ExternalEvaluator</p>
+            <div class="comment"><span class="markdown">Industry professional or external examiner assessing project
+                    outcomes</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e608"
+                        title="http://www.semanticweb.org/capstone-ontology#Stakeholders">stakeholders</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e25" title="http://www.semanticweb.org/capstone-ontology#conductsEvaluation">conducts
+                        evaluation</a><sup title="object property" class="type-op">op</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e516" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Faculty"></a>
+            <h3>faculty<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Faculty</p>
+            <div class="comment"><span class="markdown">Academic staff member involved in project supervision or
+                    evaluation</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e608"
+                        title="http://www.semanticweb.org/capstone-ontology#Stakeholders">stakeholders</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e272" title="http://www.semanticweb.org/capstone-ontology#hasName">has name</a><sup
+                        title="data property" class="type-dp">dp</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e686" title="http://www.semanticweb.org/capstone-ontology#DrJohnson">dr johnson</a><sup
+                        title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e528" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Phases"></a>
+            <h3>phases<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or
+                    <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Phases</p>
+            <div class="comment"><span class="markdown">Temporal segment of project with specific objectives.</span>
+            </div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2006/time#TemporalEntity">temporal entity</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e440" title="http://www.semanticweb.org/capstone-ontology#Design">design</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e475"
+                        title="http://www.semanticweb.org/capstone-ontology#Development">development</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e495"
+                        title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e570"
+                        title="http://www.semanticweb.org/capstone-ontology#Proposal">proposal</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e198" title="http://www.semanticweb.org/capstone-ontology#hasDeadline">has
+                        deadline</a><sup title="data property" class="type-dp">dp</sup>, <a href="#d4e219"
+                        title="http://www.semanticweb.org/capstone-ontology#hasDueDate">has due date</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e229"
+                        title="http://www.semanticweb.org/capstone-ontology#hasDuration">has duration</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e241"
+                        title="http://www.semanticweb.org/capstone-ontology#hasEndDate">has end date</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e312"
+                        title="http://www.semanticweb.org/capstone-ontology#hasStartDate">has start date</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e153"
+                        title="http://www.semanticweb.org/capstone-ontology#precedes">precedes</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e94" title="http://www.semanticweb.org/capstone-ontology#hasPhase">has phase</a><sup
+                        title="object property" class="type-op">op</sup>, <a href="#d4e153"
+                        title="http://www.semanticweb.org/capstone-ontology#precedes">precedes</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e538" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Presentation"></a>
+            <h3>presentation<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Presentation</p>
+            <div class="comment"><span class="markdown">Oral defense demonstrating project outcomes.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e430"
+                        title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e281" title="http://www.semanticweb.org/capstone-ontology#hasPresentationDate">has
+                        presentation date</a><sup title="data property" class="type-dp">dp</sup>, <a href="#d4e303"
+                        title="http://www.semanticweb.org/capstone-ontology#hasSlideCount">has slide count</a><sup
+                        title="data property" class="type-dp">dp</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e549" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Project"></a>
+            <h3>project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Project</p>
+            <div class="comment"><span class="markdown">A research or development initiative with defined objectives and
+                    timeline</span></div>
+            <dl class="description">
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e369" title="http://www.semanticweb.org/capstone-ontology#CapstoneProject">capstone
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e35" title="http://www.semanticweb.org/capstone-ontology#evaluatedBy">evaluated
+                        by</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e56"
+                        title="http://www.semanticweb.org/capstone-ontology#hasAdvisor">has advisor</a><sup
+                        title="object property" class="type-op">op</sup>, <a href="#d4e82"
+                        title="http://www.semanticweb.org/capstone-ontology#hasDeliverable">has deliverable</a><sup
+                        title="object property" class="type-op">op</sup>, <a href="#d4e210"
+                        title="http://www.semanticweb.org/capstone-ontology#hasDepartment">has department</a><sup
+                        title="data property" class="type-dp">dp</sup>, <a href="#d4e94"
+                        title="http://www.semanticweb.org/capstone-ontology#hasPhase">has phase</a><sup
+                        title="object property" class="type-op">op</sup>, <a href="#d4e103"
+                        title="http://www.semanticweb.org/capstone-ontology#hasSupervisor">has supervisor</a><sup
+                        title="object property" class="type-op">op</sup>, <a href="#d4e129"
+                        title="http://www.semanticweb.org/capstone-ontology#hasTeamMember">has team member</a><sup
+                        title="object property" class="type-op">op</sup>, <a href="#d4e340"
+                        title="http://www.semanticweb.org/capstone-ontology#hasTitle">has title</a><sup
+                        title="data property" class="type-dp">dp</sup></dd>
+            </dl>
+            <div class="info"><span class="markdown">A research or development initiative with defined objectives and
+                    timeline</span></div>
+        </div>
+        <div id="d4e560" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#ProjectRole"></a>
+            <h3>project role<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#ProjectRole</p>
+            <div class="comment"><span class="markdown">Formal function assigned to a stakeholder in project
+                    execution.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://www.w3.org/ns/prov#Role">role</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e359" title="http://www.semanticweb.org/capstone-ontology#Advisor">advisor</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e467"
+                        title="http://www.semanticweb.org/capstone-ontology#Developer">developer</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e601"
+                        title="http://www.semanticweb.org/capstone-ontology#Researcher">researcher</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e662"
+                        title="http://www.semanticweb.org/capstone-ontology#Supervisor">supervisor</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e672"
+                        title="http://www.semanticweb.org/capstone-ontology#TeamLeader">team leader</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e141" title="http://www.semanticweb.org/capstone-ontology#holdsRole">holds role</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e570" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Proposal"></a>
+            <h3>proposal<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Proposal</p>
+            <div class="comment"><span class="markdown">Initial stage involving project definition and approval.</span>
+            </div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e153" title="http://www.semanticweb.org/capstone-ontology#precedes">precedes</a><sup
+                        title="object property" class="type-op">op</sup> <span class="logic">some</span> <a
+                        href="#d4e440" title="http://www.semanticweb.org/capstone-ontology#Design">design</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e699" title="http://www.semanticweb.org/capstone-ontology#ProposalPhase">proposal
+                        phase</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e440" title="http://www.semanticweb.org/capstone-ontology#Design">design</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e591" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Report"></a>
+            <h3>report<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or
+                    <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Report</p>
+            <div class="comment"><span class="markdown">Formal document describing project process and results</span>
+            </div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e430"
+                        title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e181" title="http://www.semanticweb.org/capstone-ontology#hasAbstract">has
+                        abstract</a><sup title="data property" class="type-dp">dp</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e601" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Researcher"></a>
+            <h3>researcher<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Researcher</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole">project
+                        role</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e608" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Stakeholders"></a>
+            <h3>stakeholders<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Stakeholders</p>
+            <div class="comment"><span class="markdown">Any individual or group with interest in the project
+                    outcomes</span></div>
+            <dl class="description">
+                <dt>is equivalent to</dt>
+                <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/mbox_sha1sum">mbox sha1sum</span> <span
+                        class="logic">some</span> <span class="dotted"
+                        title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span></dd>
+                <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/name">name</span> <span
+                        class="logic">some</span> <span class="dotted"
+                        title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://schema.org/Person">person</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e505" title="http://www.semanticweb.org/capstone-ontology#ExternalEvaluator">external
+                        evaluator</a><sup title="class" class="type-c">c</sup>, <a href="#d4e516"
+                        title="http://www.semanticweb.org/capstone-ontology#Faculty">faculty</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e639"
+                        title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e141" title="http://www.semanticweb.org/capstone-ontology#holdsRole">holds role</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e35" title="http://www.semanticweb.org/capstone-ontology#evaluatedBy">evaluated
+                        by</a><sup title="object property" class="type-op">op</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e639" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Student"></a>
+            <h3>student<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Student</p>
+            <div class="comment"><span class="markdown">An individual enrolled in the academic program completing the
+                    capstone.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e608"
+                        title="http://www.semanticweb.org/capstone-ontology#Stakeholders">stakeholders</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/name">name</span> <span
+                        class="logic">min</span> 1</dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e322" title="http://www.semanticweb.org/capstone-ontology#hasStudentId">has student
+                        id</a><sup title="data property" class="type-dp">dp</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e129" title="http://www.semanticweb.org/capstone-ontology#hasTeamMember">has team
+                        member</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e170"
+                        title="http://www.semanticweb.org/capstone-ontology#producedBy">produced by</a><sup
+                        title="object property" class="type-op">op</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e713" title="http://www.semanticweb.org/capstone-ontology#Student1">student1</a><sup
+                        title="named individual" class="type-ni">ni</sup>, <a href="#d4e729"
+                        title="http://www.semanticweb.org/capstone-ontology#Student2">student2</a><sup
+                        title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e516" title="http://www.semanticweb.org/capstone-ontology#Faculty">faculty</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e662" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Supervisor"></a>
+            <h3>supervisor<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Supervisor</p>
+            <div class="comment"><span class="markdown">Offers technical direction and subject matter expertise.</span>
+            </div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole">project
+                        role</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e753" title="http://www.semanticweb.org/capstone-ontology#supervisor_role_1">supervisor
+                        role 1</a><sup title="named individual" class="type-ni">ni</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e672" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#TeamLeader"></a>
+            <h3>team leader<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#TeamLeader</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole">project
+                        role</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="objectproperties">
+        <h2>Object Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e25" title="http://www.semanticweb.org/capstone-ontology#conductsEvaluation"><span>conducts
+                        evaluation</span></a></li>
+            <li><a href="#d4e35" title="http://www.semanticweb.org/capstone-ontology#evaluatedBy"><span>evaluated
+                        by</span></a></li>
+            <li><a href="#d4e47"
+                    title="http://www.semanticweb.org/capstone-ontology#evaluatesDeliverable"><span>evaluates
+                        deliverable</span></a></li>
+            <li><a href="#d4e56" title="http://www.semanticweb.org/capstone-ontology#hasAdvisor"><span>has
+                        advisor</span></a></li>
+            <li><a href="#d4e82" title="http://www.semanticweb.org/capstone-ontology#hasDeliverable"><span>has
+                        deliverable</span></a></li>
+            <li><a href="#d4e94" title="http://www.semanticweb.org/capstone-ontology#hasPhase"><span>has
+                        phase</span></a></li>
+            <li><a href="#d4e103" title="http://www.semanticweb.org/capstone-ontology#hasSupervisor"><span>has
+                        supervisor</span></a></li>
+            <li><a href="#d4e129" title="http://www.semanticweb.org/capstone-ontology#hasTeamMember"><span>has team
+                        member</span></a></li>
+            <li><a href="#d4e141" title="http://www.semanticweb.org/capstone-ontology#holdsRole"><span>holds
+                        role</span></a></li>
+            <li><a href="#d4e153"
+                    title="http://www.semanticweb.org/capstone-ontology#precedes"><span>precedes</span></a></li>
+            <li><a href="#d4e170" title="http://www.semanticweb.org/capstone-ontology#producedBy"><span>produced
+                        by</span></a></li>
+        </ul>
+        <div id="d4e25" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#conductsEvaluation"></a>
+            <h3>conducts evaluation<sup title="object property" class="type-op">op</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#conductsEvaluation</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e505"
+                            title="http://www.semanticweb.org/capstone-ontology#ExternalEvaluator">external
+                            evaluator</a><sup title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e495"
+                            title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e35" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#evaluatedBy"></a>
+            <h3>evaluated by<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#evaluatedBy</p>
+            <div class="comment"><span class="markdown">Identifies who assesses the project outcomes</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e608"
+                            title="http://www.semanticweb.org/capstone-ontology#Stakeholders">stakeholders</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e47" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#evaluatesDeliverable"></a>
+            <h3>evaluates deliverable<sup title="object property" class="type-op">op</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#evaluatesDeliverable</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e495"
+                            title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e430"
+                            title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e56" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasAdvisor"></a>
+            <h3>has advisor<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasAdvisor</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e516" title="http://www.semanticweb.org/capstone-ontology#Faculty">faculty</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">and</span> (<a href="#d4e141"
+                            title="http://www.semanticweb.org/capstone-ontology#holdsRole">holds role</a><sup
+                            title="object property" class="type-op">op</sup> <span class="logic">some</span> <a
+                            href="#d4e359" title="http://www.semanticweb.org/capstone-ontology#Advisor">advisor</a><sup
+                            title="class" class="type-c">c</sup>)</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e82" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasDeliverable"></a>
+            <h3>has deliverable<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasDeliverable</p>
+            <div class="comment"><span class="markdown">Links project to its required outputs</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e430"
+                            title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e94" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasPhase"></a>
+            <h3>has phase<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasPhase</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e103" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasSupervisor"></a>
+            <h3>has supervisor<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasSupervisor</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e516" title="http://www.semanticweb.org/capstone-ontology#Faculty">faculty</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">and</span> (<a href="#d4e141"
+                            title="http://www.semanticweb.org/capstone-ontology#holdsRole">holds role</a><sup
+                            title="object property" class="type-op">op</sup> <span class="logic">some</span> <a
+                            href="#d4e662"
+                            title="http://www.semanticweb.org/capstone-ontology#Supervisor">supervisor</a><sup
+                            title="class" class="type-c">c</sup>)</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e129" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasTeamMember"></a>
+            <h3>has team member<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasTeamMember</p>
+            <div class="comment"><span class="markdown">Links a project to its student participants</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e141" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#holdsRole"></a>
+            <h3>holds role<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#holdsRole</p>
+            <div class="comment"><span class="markdown">Indicates which formal function a stakeholder performs</span>
+            </div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e608"
+                            title="http://www.semanticweb.org/capstone-ontology#Stakeholders">stakeholders</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e560" title="http://www.semanticweb.org/capstone-ontology#ProjectRole">project
+                            role</a><sup title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e153" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#precedes"></a>
+            <h3>precedes<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#precedes</p>
+            <div class="comment"><span class="markdown">Temporal ordering of project phases</span></div>
+            <div class="description">
+                <p><strong>has characteristics
+                        :
+                    </strong> transitive</p>
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2006/time#intervalBefore">interval before</span>
+                    </dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e170" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#producedBy"></a>
+            <h3>produced by<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#producedBy</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e430"
+                            title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="dataproperties">
+        <h2>Data Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e181" title="http://www.semanticweb.org/capstone-ontology#hasAbstract"><span>has
+                        abstract</span></a></li>
+            <li><a href="#d4e190" title="http://www.semanticweb.org/capstone-ontology#hasApprovalStatus"><span>has
+                        approval status</span></a></li>
+            <li><a href="#d4e198" title="http://www.semanticweb.org/capstone-ontology#hasDeadline"><span>has
+                        deadline</span></a></li>
+            <li><a href="#d4e210" title="http://www.semanticweb.org/capstone-ontology#hasDepartment"><span>has
+                        department</span></a></li>
+            <li><a href="#d4e219" title="http://www.semanticweb.org/capstone-ontology#hasDueDate"><span>has due
+                        date</span></a></li>
+            <li><a href="#d4e229" title="http://www.semanticweb.org/capstone-ontology#hasDuration"><span>has
+                        duration</span></a></li>
+            <li><a href="#d4e241" title="http://www.semanticweb.org/capstone-ontology#hasEndDate"><span>has end
+                        date</span></a></li>
+            <li><a href="#d4e253" title="http://www.semanticweb.org/capstone-ontology#hasFeedback"><span>has
+                        feedback</span></a></li>
+            <li><a href="#d4e263" title="http://www.semanticweb.org/capstone-ontology#hasGrade"><span>has
+                        grade</span></a></li>
+            <li><a href="#d4e272" title="http://www.semanticweb.org/capstone-ontology#hasName"><span>has name</span></a>
+            </li>
+            <li><a href="#d4e281" title="http://www.semanticweb.org/capstone-ontology#hasPresentationDate"><span>has
+                        presentation date</span></a></li>
+            <li><a href="#d4e291" title="http://www.semanticweb.org/capstone-ontology#hasScore"><span>has
+                        score</span></a></li>
+            <li><a href="#d4e303" title="http://www.semanticweb.org/capstone-ontology#hasSlideCount"><span>has slide
+                        count</span></a></li>
+            <li><a href="#d4e312" title="http://www.semanticweb.org/capstone-ontology#hasStartDate"><span>has start
+                        date</span></a></li>
+            <li><a href="#d4e322" title="http://www.semanticweb.org/capstone-ontology#hasStudentId"><span>has student
+                        id</span></a></li>
+            <li><a href="#d4e331" title="http://www.semanticweb.org/capstone-ontology#hasSubmissionDate"><span>has
+                        submission date</span></a></li>
+            <li><a href="#d4e340" title="http://www.semanticweb.org/capstone-ontology#hasTitle"><span>has
+                        title</span></a></li>
+        </ul>
+        <div id="d4e181" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasAbstract"></a>
+            <h3>has abstract<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasAbstract</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e591" title="http://www.semanticweb.org/capstone-ontology#Report">report</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e190" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasApprovalStatus"></a>
+            <h3>has approval status<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasApprovalStatus</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e430"
+                            title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e198" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasDeadline"></a>
+            <h3>has deadline<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasDeadline</p>
+            <div class="comment"><span class="markdown">When the phase must be completed</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e210" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasDepartment"></a>
+            <h3>has department<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasDepartment</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e219" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasDueDate"></a>
+            <h3>has due date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasDueDate</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e229" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasDuration"></a>
+            <h3>has duration<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasDuration</p>
+            <div class="comment"><span class="markdown">The length of time a phase takes (e.g., P30D for 30
+                    days)"</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e241" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasEndDate"></a>
+            <h3>has end date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasEndDate</p>
+            <div class="comment"><span class="markdown">When the phase actually ended</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e253" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasFeedback"></a>
+            <h3>has feedback<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasFeedback</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e495"
+                            title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e263" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasGrade"></a>
+            <h3>has grade<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasGrade</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e495"
+                            title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e272" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasName"></a>
+            <h3>has name<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasName</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e516" title="http://www.semanticweb.org/capstone-ontology#Faculty">faculty</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e281" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasPresentationDate"></a>
+            <h3>has presentation date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasPresentationDate</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e538"
+                            title="http://www.semanticweb.org/capstone-ontology#Presentation">presentation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e291" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasScore"></a>
+            <h3>has score<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasScore</p>
+            <div class="comment"><span class="markdown">Numerical evaluation result (0-100 scale)</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e495"
+                            title="http://www.semanticweb.org/capstone-ontology#Evaluation">evaluation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e303" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasSlideCount"></a>
+            <h3>has slide count<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasSlideCount</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e538"
+                            title="http://www.semanticweb.org/capstone-ontology#Presentation">presentation</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e312" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasStartDate"></a>
+            <h3>has start date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasStartDate</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e528" title="http://www.semanticweb.org/capstone-ontology#Phases">phases</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e322" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasStudentId"></a>
+            <h3>has student id<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasStudentId</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e331" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasSubmissionDate"></a>
+            <h3>has submission date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasSubmissionDate</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e430"
+                            title="http://www.semanticweb.org/capstone-ontology#Deliverables">deliverables</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e340" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#hasTitle"></a>
+            <h3>has title<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#hasTitle</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e549" title="http://www.semanticweb.org/capstone-ontology#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="namedindividuals">
+        <h2>Named Individuals</h2>
+        <ul class="hlist">
+            <li><a href="#d4e745" title="http://www.semanticweb.org/capstone-ontology#advisor_role_1"><span>advisor role
+                        1</span></a></li>
+            <li><a href="#d4e686" title="http://www.semanticweb.org/capstone-ontology#DrJohnson"><span>dr
+                        johnson</span></a></li>
+            <li><a href="#d4e699" title="http://www.semanticweb.org/capstone-ontology#ProposalPhase"><span>proposal
+                        phase</span></a></li>
+            <li><a href="#d4e713"
+                    title="http://www.semanticweb.org/capstone-ontology#Student1"><span>student1</span></a></li>
+            <li><a href="#d4e729"
+                    title="http://www.semanticweb.org/capstone-ontology#Student2"><span>student2</span></a></li>
+            <li><a href="#d4e753"
+                    title="http://www.semanticweb.org/capstone-ontology#supervisor_role_1"><span>supervisor role
+                        1</span></a></li>
+        </ul>
+        <div id="d4e745" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#advisor_role_1"></a>
+            <h3>advisor role 1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#advisor_role_1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e359" title="http://www.semanticweb.org/capstone-ontology#Advisor">advisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e686" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#DrJohnson"></a>
+            <h3>dr johnson<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#DrJohnson</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e516" title="http://www.semanticweb.org/capstone-ontology#Faculty">faculty</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e699" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#ProposalPhase"></a>
+            <h3>proposal phase<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#ProposalPhase</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e570" title="http://www.semanticweb.org/capstone-ontology#Proposal">proposal</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e241" title="http://www.semanticweb.org/capstone-ontology#hasEndDate">has end
+                        date</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"2024-09-15T00:00:00Z"</span></dd>
+                <dd><a href="#d4e312" title="http://www.semanticweb.org/capstone-ontology#hasStartDate">has start
+                        date</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"2024-09-01T00:00:00Z"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e713" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Student1"></a>
+            <h3>student1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Student1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e322" title="http://www.semanticweb.org/capstone-ontology#hasStudentId">has student
+                        id</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"CS2023001"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e729" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#Student2"></a>
+            <h3>student2<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#Student2</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e639" title="http://www.semanticweb.org/capstone-ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e322" title="http://www.semanticweb.org/capstone-ontology#hasStudentId">has student
+                        id</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"CS2023002"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e753" class="entity"><a name="http://www.semanticweb.org/capstone-ontology#supervisor_role_1"></a>
+            <h3>supervisor role 1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/capstone-ontology#supervisor_role_1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e662" title="http://www.semanticweb.org/capstone-ontology#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="namespacedeclarations">
+        <h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+        <dl>
+            <dt><em>default namespace</em></dt>
+            <dd>http://www.semanticweb.org/capstone-ontology/</dd>
+            <dt>capstone-ontology</dt>
+            <dd>http://www.semanticweb.org/capstone-ontology#</dd>
+            <dt>dc</dt>
+            <dd>http://purl.org/dc/elements/1.1/</dd>
+            <dt>dcam</dt>
+            <dd>http://purl.org/dc/dcam/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+            <dt>ns</dt>
+            <dd>http://www.w3.org/2003/06/sw-vocab-status/ns#</dd>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>prov</dt>
+            <dd>http://www.w3.org/ns/prov#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>schema-org</dt>
+            <dd>http://schema.org/</dd>
+            <dt>skos</dt>
+            <dd>http://www.w3.org/2004/02/skos/core#</dd>
+            <dt>terms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>time</dt>
+            <dd>http://www.w3.org/2006/time#</dd>
+            <dt>wot</dt>
+            <dd>http://xmlns.com/wot/0.1/</dd>
+            <dt>www-semanticweb-org</dt>
+            <dd>http://www.semanticweb.org/</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+        </dl>
+    </div>
+    <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a
+            href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a
+            href="http://www.essepuntato.it">Silvio Peroni</a>
+        .
+    </p>
+</body>
+
+</html>
